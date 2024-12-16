@@ -5,11 +5,11 @@ The code was modified from [[this repo]](https://github.com/yang-song/score_sde_
 
 > "Annealed Score-Based Diffusion Model for MR Motion Artifact Reduction",  
 > Gyutaek Oh, Sukyoung Jung, Jeong Eun Lee, and Jong Chul Ye,  
-> IEEE TCI [[Paper]](https://ieeexplore.ieee.org/document/10375761)
+> IEEE TCI, 2023 [[Paper]](https://ieeexplore.ieee.org/document/10375761)
 
 ## Requirements
 
-The code is implented in Python 3.5 with below packages.
+The code is implented in Python 3.7 with below packages.
 ```
 torch               1.8.1
 numpy               1.21.6
