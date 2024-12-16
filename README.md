@@ -30,11 +30,6 @@ tensorflow          2.4.0
 │   │   └── ncsnpp_continuous_sampling.py
 │   ├── default_configs.py
 │   └── sampling_configs.py
-├── checkpoints
-│   ├── brain
-│   │   └── checkpoint_26.pth
-│   └── liver
-│       └── checkpoint_26.pth
 ├── bsa
 │   ├── ...
 ├── cycle
@@ -49,14 +44,18 @@ tensorflow          2.4.0
 ```
 1. ```models```, ```op```: contain models and CUDA kernels
 2. ```configs```: contains configurations for training, sampling, data, model, etc.
-3. ```checkpoints```: contains pre-trained weights of diffusion models for brain/liver MRI dataset.
-4. ```bsa```, ```cycle```: contain pre-trained weights of "bootstrap subsampling and aggregation" and "CycleMedGAN-V2.0" for "NN init".
-5. ```datasets.py```: contains helper functions for pre/post-processing of data.
-6. ```fft_fn.py```: contains helper functions for Fourier transforms.
-7. ```sde_lib.py```: contains the definition of SDEs (e.g. VE-SDE)
-8. ```sampling.py```: contains Algorithm 2 of the paper.
-9. ```run_lib.py```: contains training and sampling functions.
-10. ```main.py```: contains maing script for training or sampling.
+3. ```bsa```, ```cycle```: contain models of "bootstrap subsampling and aggregation" and "CycleMedGAN-V2.0" for "NN init".
+4. ```datasets.py```: contains helper functions for pre/post-processing of data.
+5. ```fft_fn.py```: contains helper functions for Fourier transforms.
+6. ```sde_lib.py```: contains the definition of SDEs (e.g. VE-SDE)
+7. ```sampling.py```: contains Algorithm 2 of the paper.
+8. ```run_lib.py```: contains training and sampling functions.
+9. ```main.py```: contains maing script for training or sampling.
+
+## Pre-Trained Models
+You can download pre-trained models from [[here]](https://drive.google.com/drive/folders/1N7-zXjMn7HfvNkEhPfSL21MMupOKweR6?usp=sharing).
+The folder contains pre-trained diffusion models with brain or liver MR images.
+Also, you can download "bootstrap subsampling and aggregation"(bsa) and "CycleMedGAN-V2.0"(cycle) for "NN init".
 
 ## Training and Sampling
 You can train your model from scratch by running with:
@@ -74,7 +73,7 @@ python main.py --mode eval
                --workdir /your/work/directory
 ```
 
-### Citation
+## Citation
 If you find our work interesting, please consider citing
 ```
 @article{oh2023annealed,
